@@ -1,8 +1,25 @@
-import time
-print("Hi how are you")
-time.sleep(1)
-print("Your on a bout driffting to and island")
-time.sleep(1)
-print("What do your do")
-time.sleep(1)
-print("A paddle with your")
+print("You are exploring a rainforest in search of treasure.")
+print("Legend has it that there are some buried on a nearby island.")
+
+choice_lake = input("You come across a lake. Do you want to swim across, or wait for a boat? (swim/wait): ")
+
+if choice_lake.lower() == "swim":
+    print("You get eaten by a hungry shark. Game over.")
+elif choice_lake.lower() == "wait":
+    print("A boat arrives and you arrive at the island safely.")
+
+    choice_cave = input("You come to a cave. Do you want to venture inside or walk on? (venture/walk): ")
+
+    if choice_cave.lower() == "venture":
+        print("You are squished by boulders never to be seen again. Game over.")
+    elif choice_cave.lower() == "walk":
+        choice_crossroads = input("You're at a crossroads. Do you go left, right, or straight? (left/right/straight): ")
+
+        if choice_crossroads.lower() == "left":
+            print("You are trampled by a herd of wildebeest. Game over.")
+        elif choice_crossroads.lower() == "straight":
+            print("You get stung by a poisonous wasp. Game over.")
+        elif choice_crossroads.lower() == "right":
+            print("You march on and find the buried treasure! Yippee!!")
+else:
+    print("Invalid choice. Game over.")
